@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import PhoneCard from '../Phone/PhoneCard';
 import FavoriteCard from './FavoriteCard/FavoriteCard';
+import { Helmet } from 'react-helmet-async';
+
 
 
 
 const Favorites = () => {
+  
 
     const [favorites, setFavorites] = useState([])
     const [noFound, setNoFound] = useState(false)
@@ -31,10 +34,15 @@ const handleRemove =() =>{
 
     return (
         <div>
+           <Helmet>
+                  <title>Phone Shop | Favorites </title>
+           </Helmet>
+            
             {noFound ? <p className='h-[40vh] flex justify-center items-end'>{noFound}</p>
                 :
 
                 <div>
+                    
                     { 
                        favorites.length > 0 && <button onClick={handleRemove}   className='px-3 block mx-auto rounded-sm bg-pink-500 text-black'>Delete All Favorite</button>
                      }

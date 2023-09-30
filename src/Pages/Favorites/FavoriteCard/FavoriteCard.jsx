@@ -3,6 +3,7 @@ import React from 'react';
 const FavoriteCard = ({phone}) => {
     const {id,image,phone_name,brand_name,price,rating} = phone;
     return (
+        
         <div className='flex justify-center items-center h-[70vh]'>
         <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
             <div className="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
@@ -43,7 +44,10 @@ const FavoriteCard = ({phone}) => {
                         </svg>
                     </button>
                 </a>
+              
             </div>
+            
+        
         </div>
     </div>
     );
